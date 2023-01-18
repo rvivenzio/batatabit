@@ -33,7 +33,7 @@
             <!-- ----------↓↓↓-Contenedor de tabla Main-↓↓↓------------>
             <section class="main-tables-container">
                 <!-- ----------↓↓↓-Tabla1-↓↓↓------------>
-                <div class="main-currency-table" id="table1">
+                <div class="main-currency-table">
                     <p class="currency-table--title">Monedas</p>
                     <div class="currency-table--container">
                         <table>
@@ -54,12 +54,7 @@
                                 <td class="table__bottom-right table__right">$4.96 <span class="down"></span></td>
                             </tr>
                         </table>
-                        <div class="prueba">
-                            <a href="#table2"><span class="left-row"></span></a>
-                        </div>
-                        <div class="prueba">
-                            <span class="right-row"></span>
-                        </div>
+                      
                     </div>
                     <div class="currency_table--date">
                         <p>
@@ -68,21 +63,28 @@
                     </div>  
                 </div>
                 <!-- ----------↓↓↓-Tabla2-↓↓↓------------>
-                <div class="main-commission-container" id="table2">
+                <div class="main-commission-container">
                     <p class="commission__title">Comisiones</p>
-                    <div class="commision__table">
-                        <div class="child">Bitrade </div>
-                        <div class="child">$12.96</div>
-                        <div class="child">Bitpreco</div>
-                        <div class="child">$13.07</div>
-                        <div class="child">Novadax</div>
-                        <div class="child">$3.15</div>
-                        <div class="child">Coinext</div>
-                        <div class="child">$14.96</div>
-                        <div class="prueba">
-                            <a href="#table1"><span class="right-row"></span></a>
-                        </div>
-                    </div>
+                    <div class="currency-table--container">
+                            <table>
+                                <tr>
+                                    <td class="table__top-left">Bitrade</td>
+                                    <td class="table__top-right table__right">$ 12.96</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Bitpreco</td>
+                                    <td class="table__right">$ 13.07</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Novadax</td>
+                                    <td class="table__right">$ 13.15</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="table__bottom-left">Coinext</td>
+                                    <td class="table__bottom-right table__right">$ 14.96</td>
+                                </tr>
+                            </table>
+                    </div>         
                     <div class="commission_table--date">
                         <p>
                            <b>Actualizado:</b> 19 Julio 23:45 
@@ -140,19 +142,19 @@
             <section class="plans-container--slider">
                 <!-- ↓↓↓/*Cards*/↓↓↓ -->
                 <article class="plans-container--card">
+                    <div class="plan-info-container">
+                        <h3 class="plan-card--title">Pago Trimestral</h3>
+                        <p class="plan-card--price">49</p>
+                        <p class="plan-card--saving">*Ahorras $8 comparado al plan mensual.</p>
+                        <button class="plan-card--ca">Escoger este <span></span></button>
+                    </div>
+                </article>
+                <article class="plans-container--card">
                     <p class="recommended">Recomendado</p>
                     <div class="plan-info-container">
                         <h3 class="plan-card--title">Pago Anual</h3>
                         <p class="plan-card--price">99</p>
                         <p class="plan-card--saving">*Ahorras $129 comparado al plan mensual.</p>
-                        <button class="plan-card--ca">Escoger este <span></span></button>
-                    </div>
-                </article>
-                <article class="plans-container--card">
-                    <div class="plan-info-container">
-                        <h3 class="plan-card--title">Pago Trimestral</h3>
-                        <p class="plan-card--price">49</p>
-                        <p class="plan-card--saving">*Ahorras $8 comparado al plan mensual.</p>
                         <button class="plan-card--ca">Escoger este <span></span></button>
                     </div>
                 </article>

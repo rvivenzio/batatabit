@@ -142,9 +142,6 @@ main {
     margin: 0 auto;
     margin-bottom: 50px;
     background: url('./assets/img/Bitcoin.svg') no-repeat center/cover;
-    /* background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; */
 
 }
 
@@ -164,11 +161,12 @@ main {
     color: #757575;
 }
 
-
+/* Slider */
 .main-tables-container {
     display: flex;
     overflow-x: scroll;
-    scroll-behavior: smooth;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
 }
 
 .main-tables-container::-webkit-scrollbar {
@@ -177,17 +175,19 @@ main {
 
 
 .main-currency-table {
-    
     width: 70%;
     min-width: 315px;
     max-width: 500px;
     height: 360px;
     margin: 0 auto;
     font-family: var(--font-inter);
+    scroll-snap-align: center;
 }
 
 .main-currency-table .currency-table--title {
     margin-bottom: 15px;
+    text-align: center;
+    /* Tipografia */
     font-size: 1.8rem;
     font-weight: bold;
     line-height: 2.3rem;
@@ -208,7 +208,7 @@ main {
 .currency-table--container table {
     width: 100%;
     height: 100%;
-    border-collapse: collapse;
+    /* border-collapse: collapse; */ 
     
 }
 
@@ -317,23 +317,25 @@ main {
     height: 360px;
     margin: 0 auto;
     font-family: var(--font-inter);
+    scroll-snap-align: center;
 }
 
 .main-commission-container .commission__title {
     /* Posicionamiento */
-    margin-left: 28px;
-    text-align: left;
+    margin-bottom: 15px;
+    text-align: center;
     /* Tipografia */
-    color: var(--secondary-blue);
-    font-weight: 700;
     font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.3rem;
+    color: var(--secondary-blue);
+    
+    
 }
 
 .main-commission-container .commision__table {
     /* Posicionamiento */
     position: relative;
-    display: grid;
-    grid-template-columns: 50% 50%;
     /* Modelo de caja */
     width: 90%;
     min-width: 230px;
@@ -545,12 +547,11 @@ main {
 
 .plans-container--slider {
     display: flex;
-    gap: 50px;
+    gap: 10px;
     height: 316px;
     overflow-x: scroll;
     overscroll-behavior-x: contain;
     scroll-snap-type: x proximity;
-    
 }
 
 .plans-container--slider::-webkit-scrollbar {
@@ -566,8 +567,7 @@ main {
     height: 250px;
     margin: 50px auto 0;
     padding: 0 15px;
-    background: linear-gradient(112deg, rgba(2,0,36,1) 0%, rgba(247,147,26,1) 54%);
-    /* background-color: var(--just-white); */
+    background-color: var(--just-white);
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
     
@@ -637,14 +637,6 @@ main {
     background-image: url('./assets/icons/orange-right-arrow.svg');
     vertical-align: text-bottom;
 }
-
-.plans-container--slider article:nth-child(2) {
-    background: linear-gradient(112deg, rgba(2,0,36,1) 0%, rgba(247,147,26,1) 54%);;
-  }
-
-.plans-container--slider article:nth-child(3) {
-    background: linear-gradient(112deg, rgba(2,0,36,1) 0%, rgba(247,147,26,1) 54%);
-  }
 
 footer {
     display: flex;
