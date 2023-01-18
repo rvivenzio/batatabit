@@ -1,0 +1,672 @@
+/* 
+1. Posicionamiento --> static, absolute, relative, fixed
+2. Modelo de caja (Box model) --> margin, border, padding, content
+3. Tipografía --> tipos, tamaños de fuente, etc
+4. Estilos visuales --> box-shadow, border-radius, gradient, etc
+5. Otros --> reglas CSS y más
+*/
+
+:root {
+    /* Colores */
+    --soft-orange: #ffe9d5;
+    --secondary-blue: #1a9af7;
+    --soft-blue: #e7f5ff;
+    --warm-black: #282623;
+    --black: #201e1c;
+    --grey: #bababa;
+    --off-white: #faf8f7;
+    --just-white: #fff;
+    --bitcoin-orange: #f7931a;
+    --background:#E5E5E5;
+	--linear-gradient:207.8deg, #201E1C 16.69%, #F7931A 100%;
+
+    /* Fonts */
+    --font-sans:'DM Sans', sans-serif;
+	--font-inter:'Inter', sans-serif;
+
+	
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: var(--font-sans);
+}
+
+header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 32rem;
+    height: 33.4rem;
+    text-align: center;
+    background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%
+    );
+
+}
+
+header img {
+    width: 15rem;
+    height: 2.4rem;
+    margin-top: 6rem;
+    align-self: center;
+}
+
+.header__title-container {
+    width: 90%;
+    min-width: 28.8rem;
+    max-width: 90rem;
+    height: 21.8rem;
+    margin-top: 4rem;
+    text-align: center;
+    align-self: center;
+}
+
+.header__title-container h1 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--just-white);
+}
+
+.header__title-container p{
+    margin-top: 2.5rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--soft-orange);
+}
+
+header .header__button {
+    position: absolute;
+    left: calc(50% - 11.45rem);
+    top: calc(100% - 2.4rem);
+	/* top: 27rem;
+    display: block;
+    margin-top: 3.5rem; */
+    padding: 1.5rem;
+    width: 22.9rem;
+    height: 4.8rem;
+    background-color: var(--off-white);
+    /* Sombra */
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--black); 
+}
+
+
+.header__button span {
+    display: inline-block;
+    width: 13px;
+    height: 8px;
+    margin-left: 10px;
+    background-image: url('./assets/icons/down-arrow.svg');
+}
+
+main {
+    width: 100%;
+    height: auto;
+    background-color: var(--off-white);
+}
+
+.main-exchangue-container {
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    text-align: center;
+    overflow-x: hidden;
+
+}
+
+.main-exchange-container--title {
+    width: 90%;
+    min-width: 28.8rem;
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+.main-exchangue-container .backgroundImg {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    background: url('/assets/img/Bitcoin.svg') no-repeat center/cover;
+
+}
+
+.main-exchangue-container h2 {
+    margin-bottom: 30px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--black);
+}
+
+.main-exchangue-container p {
+    margin-bottom: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    color: #757575;
+}
+
+/* Slider */
+.main-tables-container {
+    display: flex;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+.main-tables-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+.main-currency-table {
+    width: 70%;
+    min-width: 315px;
+    max-width: 500px;
+    height: 360px;
+    margin: 0 auto;
+    font-family: var(--font-inter);
+    scroll-snap-align: center;
+}
+
+.main-currency-table .currency-table--title {
+    margin-bottom: 15px;
+    text-align: center;
+    /* Tipografia */
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.3rem;
+    color: var(--bitcoin-orange);
+    
+}
+
+.currency-table--container {
+    position: relative;
+    width: 90%;
+    min-width: 230px;
+    max-width: 300px;
+    height: 250px;
+    margin: 0 auto;
+}
+
+
+.currency-table--container table {
+    width: 100%;
+    height: 100%;
+    /* border-collapse: collapse; */ 
+    
+}
+
+
+.currency-table--container td {
+    width: 50%;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    color: var(--grey);
+    background-color: var(--just-white);
+    
+}
+
+.table__top-left {
+    border-radius: 15px 0 0 0;
+}
+
+.table__top-right {
+    border-radius: 0 15px 0 0;
+}
+
+.table__bottom-left {
+    border-radius: 0 0 0 15px;
+}
+
+.table__bottom-right {
+    border-radius: 0 0 15px 0;
+}
+
+.currency-table--container .table__right {
+    font-size: 1.4rem;
+    font-weight: normal;
+    line-height: 1.7rem;
+    color: #757575;
+}
+
+.currency-table--container .down {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background: url('./assets/icons/trending-down.svg') no-repeat center/cover;
+
+}
+
+.currency-table--container .up {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background: url('./assets/icons/trending-up.svg') no-repeat center/cover;
+
+}
+
+.currency_table--date {
+    width: 190px;
+    height: 30px;
+    margin: 15px auto 0;
+    padding: 8px;
+    background-color: var(--soft-orange);
+    border-radius: 8px;
+}
+
+.currency_table--date > p {
+    width: max-content;
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: var(--warm-black);
+}
+
+.left-row {
+    position: absolute;
+    display: inline-block;
+    top: calc(50% - 7.5px);
+    right: calc(0% - 15px);
+    width: 8px;
+    height: 13px;
+    background: url('./assets/icons/right-arrow.svg') no-repeat center/cover;
+}
+
+.right-row {
+    position: absolute;
+    display: inline-block;
+    top: calc(50% - 7.5px);
+    left: calc(0% - 15px);
+    width: 8px;
+    height: 13px;
+    background: url('./assets/icons/right-arrow.svg') no-repeat center/cover;
+    transform: rotate(180deg);
+}
+
+/* 
+1. Posicionamiento --> static, absolute, relative, fixed
+2. Modelo de caja (Box model) --> margin, border, padding, content
+3. Tipografía --> tipos, tamaños de fuente, etc
+4. Estilos visuales --> box-shadow, border-radius, gradient, etc
+5. Otros --> reglas CSS y más
+*/
+
+.main-commission-container {
+    width: 70%;
+    min-width: 315px;
+    max-width: 500px;
+    height: 360px;
+    margin: 0 auto;
+    font-family: var(--font-inter);
+    scroll-snap-align: center;
+}
+
+.main-commission-container .commission__title {
+    /* Posicionamiento */
+    margin-bottom: 15px;
+    text-align: center;
+    /* Tipografia */
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.3rem;
+    color: var(--secondary-blue);
+    
+    
+}
+
+.main-commission-container .commision__table {
+    /* Posicionamiento */
+    position: relative;
+    /* Modelo de caja */
+    width: 90%;
+    min-width: 230px;
+    max-width: 300px;
+    justify-self: center; 
+    margin: 0 auto;
+    /* Tipografia */
+    /* Estilos visuales */
+    background-color: var(--just-white);
+    border-radius: 15px;
+    
+    
+}
+
+
+.commision__table .child {
+    /* Posicinamiento */
+    
+    padding: 20.75px;
+    /* Tipografía */
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    border: 1px solid var(--off-white);
+    color: var(--grey); 
+
+}
+
+.commision__table .child:nth-child(even) {
+    color: #757575;
+    font-size: 1.4rem;
+}
+
+
+.commission_table--date {
+    width: 190px;
+    height: 30px;
+    margin: 15px auto 0;
+    padding: 8px;
+    background-color: var(--secondary-blue);
+    border-radius: 8px;
+}
+.commission_table--date > p {
+    width: max-content;
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: var(--warm-black);
+}
+
+.main-product-detail {
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    padding: 20px 10px;
+    background-color: var(--black);
+}
+
+.product-detail-batata-logo {
+    position: absolute;
+    width: 40px;
+    height: 25px;
+    top: -10px;
+    left: calc(50% - 20px);
+    background-image: url('./assets/icons/batata.svg');
+    
+}
+
+.product-detail--title {
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    margin: 50px auto 0;
+    text-align: center;
+}
+
+.product-detail--title h2 {
+    margin-bottom: 20px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--just-white);
+}
+
+.product-detail--title p {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #808080;
+
+}
+
+/* Trjetas */
+.product-detail-card {
+    width: 90%;
+    min-width: 288px;
+    max-width: 400px;
+    height: 150px;
+    margin: 15px auto;
+    padding: 15px;
+    background-color: var(--warm-black);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+}
+
+.product-detail-card .bg-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+    
+}
+.clock {
+    background: url('./assets/icons/clock.svg') no-repeat center/cover;
+}
+
+.eye {
+    background: url('./assets/icons/eye.svg') no-repeat center/cover;
+}
+
+.dollar {
+    background: url('./assets/icons/dollar-sign.svg') no-repeat center/cover;
+}
+
+.check {
+    background: url('./assets/icons/check-circle.svg') no-repeat center/cover;
+}
+
+.product--card-title {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--just-white);
+}
+
+.product--card-body {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #808080;
+}
+
+.bitcoin-img-container {
+    width: 100%;
+    min-width: 320px;
+    height: 50vh;
+    background: url('./assets/img/bitcoinbaby2x.jpg') no-repeat center/cover;
+}
+
+.bitcoin-img-container h2 {
+    padding-top: 60px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--just-white);
+    text-align: center;
+}
+
+/* ############### */
+/*      Section 3 */
+/* ############### */
+
+.main-plans-container {
+    width: 100%;
+    min-width: 320px;
+    padding-bottom: 70px;
+    text-align: center;
+}
+
+.plans--title {
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    margin: 0 auto 50px;
+   
+}
+
+.plans--title h2 {
+    padding-top: 50px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--black);
+}
+
+.plans--title p {
+    padding-top: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #757575;
+}
+
+/* 
+1. Posicionamiento --> static, absolute, relative, fixed
+2. Modelo de caja (Box model) --> margin, border, padding, content
+3. Tipografía --> tipos, tamaños de fuente, etc
+4. Estilos visuales --> box-shadow, border-radius, gradient, etc
+5. Otros --> reglas CSS y más
+*/
+
+/* Cards */
+/* ############################## */
+/* class="plans-container--slider" */
+/* ############################## */
+
+.plans-container--slider {
+    display: flex;
+    gap: 10px;
+    height: 316px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+.plans-container--slider::-webkit-scrollbar {
+    display: none;
+  }
+
+.plans-container--card {
+    position: relative;
+    scroll-snap-align: center;
+    width: 70%;
+    min-width: 230px;
+    max-width: 300px;
+    height: 250px;
+    margin: 50px auto 0;
+    padding: 0 15px;
+    background-color: var(--just-white);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+    
+}
+
+.recommended {
+    position: absolute;
+    width: 120px;
+    height: 31px;
+    top: -15px;
+    left: calc(50% - 60px);
+    font-size: 1.2rem;
+    line-height: 31px;
+    background-color: var(--bitcoin-orange);
+    border-radius: 8px;
+    color: var(--just-white);
+    
+}
+
+.plan-card--title {
+    padding-top: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #000;
+}
+
+.plan-card--price {
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 5.2rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.plan-card--price::before {
+    content: "$";
+    font-weight: 300;
+    font-size: 1.4rem;
+    vertical-align: 28px;
+}
+
+.plan-card--saving {
+    font-size: 1.2rem;
+    color: #757575;
+}
+
+.plan-card--ca {
+    width: 150px;
+    height: 48px;
+    margin-top: 20px;
+    background-color: #faf8f7;
+    border: 2px solid var(--bitcoin-orange);
+    border-radius: 4px;
+    font-family: var(--font-sans);
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.plan-card--ca span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('./assets/icons/orange-right-arrow.svg');
+    vertical-align: text-bottom;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: var(--bitcoin-orange);
+}
+
+footer section {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .left ul {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    list-style: none;
+}
+
+.left li {
+    margin: 10px 0;
+}
+
+.left a {
+    text-decoration: none;
+    color: var(--just-white);
+}
+
+
+
