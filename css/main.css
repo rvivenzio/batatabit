@@ -141,7 +141,7 @@ main {
     height: 200px;
     margin: 0 auto;
     margin-bottom: 50px;
-    background: url('/assets/img/Bitcoin.svg') no-repeat center/cover;
+    background: url('../assets/img/Bitcoin.svg') no-repeat center/cover;
 
 }
 
