@@ -8,7 +8,7 @@ El usos de los *Media Queries* nos permite comenzar las vistas de mobile hacia l
 
 ## Vista del proyecto 🚀
 
-[Batatabit](https://rvivenzio.github.io/Batatabit/)
+[Batatabit](https://rvivenzio.github.io/batatabit/)
 
 ## Construido con 🛠️
 
@@ -18,7 +18,7 @@ El usos de los *Media Queries* nos permite comenzar las vistas de mobile hacia l
 
 ## Autor ✒️
 
-* **rvivenzio**  - [julian1f](https://github.com/rvivenzio)
+* **rvivenzio**  - [rvivenzio](https://github.com/rvivenzio)
 
 # Impartido por:
 
